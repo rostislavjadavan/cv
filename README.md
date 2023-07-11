@@ -1,5 +1,5 @@
 <p align="center">
-    <img style="border-radius:40px;" src="assets/profile.png" width="80" height="80" />
+    <img src="assets/profile.png" width="80" height="80" />
 </p>
 <h1 align="center">Rostislav Jadavan Resume (CV)</h1>
 <p align="center">
