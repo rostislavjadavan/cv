@@ -1,13 +1,13 @@
-<div style="text-align:center">
-<img style="border-radius:40px;" src="assets/profile.png" width="80" height="80" />
-
-# Rostislav Jadavan Resume (CV)
-
-🚀 Build using HTML & Tailwind CSS.
-
-[👉 Download PDF version](https://github.com/rostislavjadavan/cv/releases/latest/download/cv.pdf)
-
-</div>
+<p align="center">
+    <img style="border-radius:40px;" src="assets/profile.png" width="80" height="80" />
+</p>
+<h1 align="center">Rostislav Jadavan Resume (CV)</h1>
+<p align="center">
+    🚀 Build using HTML & Tailwind CSS.
+</p>
+<p align="center">
+    <a href="https://github.com/rostislavjadavan/cv/releases/latest/download/cv.pdf">👉 Download PDF version</a>
+</p>
 
 ## Development
 
