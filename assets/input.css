@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-3xl mb-5 text-black font-bold
+  }
+
+  h2 {
+    @apply text-2xl mb-1 text-black font-bold
+  }
+
+  h3 {
+    @apply text-lg mb-1 text-gray-800 font-semibold
+  }
+
+  p {
+    @apply text-base mb-4 text-gray-600;
+  }
+
+  a {
+    @apply text-blue-600 font-medium hover:underline
+  }
+
+  small {
+    @apply text-sm text-gray-600
+  }
+
+  time,
+  .time {
+    @apply mb-1 text-sm font-normal leading-none text-gray-400;
+  }
+
+  .badge {
+    @apply rounded-full border px-2 py-0.5 text-sm font-medium border-gray-300 text-gray-500;
+  }
+
+  .exp-block {
+    @apply mb-10
+  }
+}
+
+@media print {
+  body {
+    zoom: 80%;
+  }
+  .pagebreak {
+    clear: both;
+    page-break-after: always;
+  }
+}
