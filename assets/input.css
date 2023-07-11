@@ -43,7 +43,7 @@
 
 @media print {
   body {
-    zoom: 80%;
+    zoom: 78%;
   }
   .pagebreak {
     clear: both;
