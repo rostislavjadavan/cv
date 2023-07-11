@@ -43,7 +43,7 @@ jobs:
         prerelease: false
 
     - name: Fix pdf permissions
-      run: "chown 1001:1001 ./cv.pdf"
+      run: "sudo chown 1001:1001 ./cv.pdf"
 
     - name: Upload Release Asset
       id: upload-release-asset
