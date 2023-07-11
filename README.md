@@ -14,7 +14,7 @@ npm run build
 
 ### Manual
 
-- Open in browser
+- Open [index.html](index.html) in browser
 - Print `CMD+P`
 - Select `Save to PDF`
 
