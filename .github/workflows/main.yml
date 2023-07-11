@@ -29,7 +29,7 @@ jobs:
 
     - name: Build PDF
       run: |
-        docker run -v ${PWD}:/work --user 1001 sitespeedio/webbrowsers google-chrome --no-sandbox --headless --disable-gpu --print-to-pdf-no-header --print-to-pdf=/work/cv.pdf /work/index.html
+        docker run -v ${PWD}:/work --user 1001 sitespeedio/webbrowsers google-chrome --no-sandbox --headless --disable-gpu --no-pdf-header-footer --print-to-pdf=/work/cv.pdf /work/index.html
 
     - name: Get current tag
       id: current_tag
