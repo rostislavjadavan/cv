@@ -1,7 +1,6 @@
 {
   "name": "cv",
   "version": "1.0.0",
-  "main": "index.js",
   "scripts": {
     "dev": "npx tailwindcss -i ./assets/input.css -o ./dist/output.css --watch",
     "build": "npm run build:css && npm run build:pdf",
