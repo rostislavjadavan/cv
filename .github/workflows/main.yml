@@ -16,6 +16,17 @@ jobs:
     - name: Pull Docker image
       run: docker pull sitespeedio/webbrowsers
 
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16'
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Build CSS
+      run: npm run build:css
+
     - name: Build PDF
       run: |
         docker run -v ${PWD}:/work --user 1001 sitespeedio/webbrowsers google-chrome --no-sandbox --headless --disable-gpu --print-to-pdf-no-header --print-to-pdf=/work/cv.pdf /work/index.html
