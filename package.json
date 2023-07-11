@@ -5,6 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "npx tailwindcss -i ./assets/input.css -o ./dist/output.css --watch",
+    "build": "npm run build:css && npm run build:pdf",
+    "build:css": "npx tailwindcss -i ./assets/input.css -o ./dist/output.css",
+    "build:pdf": "/Applications/Google\\ Chrome.app/Contents/MacOS/Google\\ Chrome --headless --disable-gpu --print-to-pdf-no-header --print-to-pdf=cv.pdf index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

@@ -8,6 +8,12 @@ npm run dev
 
 ## Export to PDF
 
+```
+npm run build
+```
+
+### Manual
+
 - Open in browser
 - Print `CMD+P`
 - Select `Save to PDF`
