@@ -18,7 +18,7 @@ jobs:
 
     - name: Build PDF
       run: |
-        docker run -v ${PWD}:/work sitespeedio/webbrowsers google-chrome --no-sandbox --headless --disable-gpu --print-to-pdf-no-header --print-to-pdf=/work/cv.pdf /work/index.html
+        docker run -v ${PWD}:/work --user 1001 sitespeedio/webbrowsers google-chrome --no-sandbox --headless --disable-gpu --print-to-pdf-no-header --print-to-pdf=/work/cv.pdf /work/index.html
 
     - name: Get current tag
       id: current_tag
@@ -43,7 +43,7 @@ jobs:
         prerelease: false
 
     - name: Fix pdf permissions
-      run: chown $USER ./cv.pdf"
+      run: "chown 1001:1001 ./cv.pdf"
 
     - name: Upload Release Asset
       id: upload-release-asset
