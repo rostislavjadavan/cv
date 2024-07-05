@@ -37,7 +37,7 @@
   }
 
   .badge {
-    @apply rounded-full inline-flex border shadow-sm px-2 py-0.5 text-sm font-medium border-gray-300 text-gray-400;
+    @apply rounded-full inline-flex border px-2 py-0.5 text-sm font-medium border-gray-300 text-gray-400;
   }
 
   .exp-block {
