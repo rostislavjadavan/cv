@@ -32,8 +32,12 @@
     @apply mb-1 text-sm font-normal leading-none text-gray-400;
   }
 
+  .badges {
+    @apply space-y-2
+  }
+
   .badge {
-    @apply rounded-full border px-2 py-0.5 text-sm font-medium border-gray-300 text-gray-500;
+    @apply rounded-full inline-flex border shadow-sm px-2 py-0.5 text-sm font-medium border-gray-300 text-gray-400;
   }
 
   .exp-block {
@@ -45,6 +49,7 @@
   body {
     zoom: 78%;
   }
+
   .pagebreak {
     clear: both;
     page-break-after: always;
