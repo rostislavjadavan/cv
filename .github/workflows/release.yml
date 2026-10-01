@@ -1,0 +1,52 @@
+name: Build and release CV
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Release tag (for example, v1.0.0)
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Set up Chrome
+        id: chrome
+        uses: browser-actions/setup-chrome@v2
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build CV
+        env:
+          CHROME_PATH: ${{ steps.chrome.outputs.chrome-path }}
+        run: npm run build
+
+      - name: Create or update release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ inputs.tag }}
+        run: |
+          if gh release view "$RELEASE_TAG" >/dev/null 2>&1; then
+            gh release upload "$RELEASE_TAG" cv.pdf --clobber
+          else
+            gh release create "$RELEASE_TAG" cv.pdf \
+              --target "$GITHUB_SHA" \
+              --title "$RELEASE_TAG" \
+              --generate-notes
+          fi
