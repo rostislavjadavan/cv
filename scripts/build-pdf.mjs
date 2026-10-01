@@ -17,6 +17,7 @@ const result = spawnSync(
   chrome,
   [
     "--headless=new",
+    "--no-sandbox",
     "--disable-gpu",
     "--no-pdf-header-footer",
     `--print-to-pdf=${output}`,
